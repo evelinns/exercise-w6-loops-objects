@@ -11,7 +11,7 @@ const pokemons = [
   "Metapod",
   "Weedle",
   "Pikachu",
-  "Pidgey"
+  "Pidgey",
 ];
 
 // 1)
@@ -19,24 +19,45 @@ const pokemons = [
 // the pokemons from the pokemons array
 // invoke the function to see that it works
 
+const printArray = (item) => {
+  console.log(item);
+};
+
+pokemons.forEach(printArray);
+
 // 2)
 // Create an object for the pokemon Pikachu.
 // it could have properties such as name, element,
 // strength, color, amountOfLegs or something like that.
+
+const pokemon = {
+  name: "Pikachu",
+  element: "Electric",
+  strength: 110,
+  color: "Yellow",
+};
 
 // 3)
 // console.log something like
 // 'Pikachu is a electricity pokemon with the strength of 32'
 // Selecting some of the information about your pikachu object.
 
+console.log(
+  `${pokemon.name} is an ${pokemon.element} pokemon with the stregnth of ${pokemon.strength}.`
+);
+
 // 4)
 // Add the property stillToCatch: true to the Pikachu object.
 
+pokemon.stillToCatch = true;
+
 // 5)
 // change the value of the key strength in the Pikachu object.
+pokemon.strength = 125;
 
 // 6)
 // Delete a property from the Pikachu object.
+delete pokemon.color;
 
 // 7)
 // Fill up this array with a few more pokemons.
@@ -47,19 +68,39 @@ const moreAboutPokemons = [
   {
     name: "Bulbasaur",
     element: "water",
-    strength: 13
+    strength: 13,
   },
   {
     name: "Charmander",
     element: "fire",
-    strength: 32
-  }
+    strength: 32,
+  },
 ];
+
+let newPokemon = {
+  name: "Pikachu",
+  element: "Electric",
+  strength: 58,
+};
+
+moreAboutPokemons.push(newPokemon);
 
 // 8)
 // Print out all the NAMES of the pokemons in this new array.
+const printNames = (item) => {
+  console.log(item.name);
+};
+
+moreAboutPokemons.forEach(printNames);
 
 // 9)
 // Print out something like
 // 'Bulbasaur is a water pokemon with the strength of 32'
 // Do this for all the pokemons.
+const printInformation = (item) => {
+  console.log(
+    `${item.name} is an ${item.element} pokemon with the stregnth of ${item.strength}.`
+  );
+};
+
+moreAboutPokemons.forEach(printInformation);
